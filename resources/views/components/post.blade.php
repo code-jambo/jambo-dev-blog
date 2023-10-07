@@ -7,9 +7,6 @@
             <h3 class="title mb-1"><a wire:navigate class="text-link" href="{{ $plink }}">{{ $ptitle }}</a>
             </h3>
             <div class="meta mb-1"><span class="date">Published {{ $pdate }}</span>
-                <span class="time">5 min read</span>
-                <span class="comment"><a class="text-link" href="#">8 comments</a></span>
-
 
             </div>
             <div class="intro">{{ $pcontent }}</div>

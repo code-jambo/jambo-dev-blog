@@ -3,9 +3,8 @@
         <div class="container single-col-max-width">
             <header class="blog-post-header">
                 <h2 class="title mb-2">{{ $post->title }}</h2>
-                <div class="meta mb-3"><span class="date">Published {{ $post->created_at->format('D M Y') }}</span><span
-                        class="time">5 min
-                        read</span><span class="comment"><a class="text-link" href="#">4 comments</a></span></div>
+                <div class="meta mb-3"><span class="date">Published {{ $post->created_at->format('D M Y') }}</span>
+                </div>
             </header>
 
 
@@ -25,12 +24,11 @@
 
 
             <nav class="blog-nav nav nav-justified my-5">
-                <a class="nav-link-prev nav-item nav-link rounded-left" href="#">Previous<i
+                <a class="nav-link-prev nav-item nav-link rounded-left" wire:navigate href="{{ route('home') }}">Back<i
                         class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-                <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i
-                        class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-            </nav>
 
+            </nav>
+            {{--
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
@@ -69,7 +67,7 @@
                         comments powered by Disqus.
                     </a>
                 </noscript>
-            </div><!--//blog-comments-section-->
+            </div><!--//blog-comments-section--> --}}
 
         </div><!--//container-->
     </article>
