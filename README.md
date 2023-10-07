@@ -2,7 +2,7 @@
 
 Jambo 👋 Dev Blog is a minimalistic Single Page Application (SPA) blog CMS designed specifically for developers. Built using Laravel, Livewire 3, and Filament 3, it offers a streamlined and efficient way for developers to create and manage their blogs.
 
-![ddfdf](https://github.com/code-jambo/jambo-dev-blog/blob/main/public/assets/images/screenshot.png?raw=true)
+![ddfdf](https://github.com/code-jambo/jambo-dev-blog/blob/main/public/assets/images/Screenshot.png?raw=true)
 
 ## Features
 
