@@ -23,7 +23,8 @@ class CategoryPost extends Component
 
         $posts = $this->category->posts();
         if ($this->searchTerm != '') {
-            $posts->orWhere("title", "like", "%" . $this->searchTerm . "%");
+
+            $posts = $posts->where("title", "like", "%" . $this->searchTerm . "%");
         }
 
         return view('livewire.category-post', ['posts' => $posts->paginate(10)])
