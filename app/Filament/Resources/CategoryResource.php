@@ -31,8 +31,8 @@ class CategoryResource extends Resource
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state)))
                     ->required(),
                 Forms\Components\TextInput::make('slug')->readOnly(),
+                Forms\Components\FileUpload::make('image')->directory('category/images'),
                 Forms\Components\Textarea::make('description')->columnSpanFull(),
-
             ])->columns(2);
     }
 
@@ -40,6 +40,7 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('description'),

@@ -30,7 +30,7 @@
 
         <ul class="navbar-nav flex-column text-start">
             <x-nav-item options="wire:navigate" text="home" :to="route('home')" icon="home" />
-            <x-nav-item options="wire:navigate" text="Blog Categories" to="#" icon="bookmark" />
+            <x-nav-item options="wire:navigate" text="Categories" to="/categories" icon="bookmark" />
             <x-nav-item options="wire:navigate" text="About Me" :to="route('about')" icon="user" />
         </ul>
 
