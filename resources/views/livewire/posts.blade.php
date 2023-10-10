@@ -8,6 +8,7 @@
         <x-search />
         <div class="container single-col-max-width">
             {{-- //post item --}}
+
             @if (count($posts) < 1)
                 <p class="text-center p-5 m-5 text-primary"> sorry no posts available </p>
             @endif

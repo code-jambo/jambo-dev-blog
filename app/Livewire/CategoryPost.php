@@ -27,7 +27,7 @@ class CategoryPost extends Component
             $posts = $posts->where("title", "like", "%" . $this->searchTerm . "%");
         }
 
-        return view('livewire.category-post', ['posts' => $posts->paginate(10)])
+        return view('livewire.category-post', ['posts' => $posts->paginate(3)])
             ->extends('layouts.app')
             ->section('content')
         ;
