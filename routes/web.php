@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/posts', Posts::class);
+Route::get('/categories', function () {
+    return view('welcome');
+});
 Route::get('/', Posts::class)->name('home');
 Route::get('/posts/{slug}', Post::class);
 // Route::get('/post', Post::class);

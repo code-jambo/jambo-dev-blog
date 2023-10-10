@@ -73,4 +73,14 @@
     </article>
 
 
+    <style>
+        pre {
+            background-color: black;
+            color: rgb(241, 235, 233);
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
 </div>
