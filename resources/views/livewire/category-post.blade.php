@@ -1,9 +1,12 @@
 <div>
-    <x-cta :image="url($category->image)" ctitle="{{ $category->title }}" :cdescription="$category->description" :action="false"
-        extra="text-primary underline" />
-
+    <x-cta :image="url($category->image)" ctitle="{{ $category->title }}" :cdescription="$category->description" :action="true" />
 
     <section class="blog-list px-3 py-5 p-md-5">
+        <div class="text-end p-2">
+
+            <input type="text" class="form-input" placeholder="Search Posts .." wire:model.live="searchTerm">
+        </div>
+
         <div class="container single-col-max-width">
             {{-- //post item --}}
 

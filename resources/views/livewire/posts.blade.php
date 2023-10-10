@@ -5,6 +5,7 @@
 
 
     <section class="blog-list px-3 py-5 p-md-5">
+        <x-search />
         <div class="container single-col-max-width">
             {{-- //post item --}}
             @if (count($posts) < 1)

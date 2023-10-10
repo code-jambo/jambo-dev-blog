@@ -68,14 +68,14 @@
             transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
             overflow: hidden;
             border-radius: 20px;
-            min-height: 250px;
+            min-height: 180px;
             min-width: auto;
             box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 768px) {
             .card {
-                min-height: 150px;
+                min-height: 100px;
             }
         }
 

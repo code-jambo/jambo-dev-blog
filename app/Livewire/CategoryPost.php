@@ -5,8 +5,6 @@ namespace App\Livewire;
 use App\Models\Post;
 use Livewire\Component;
 use App\Models\Category;
-
-
 use Livewire\WithPagination;
 
 class CategoryPost extends Component
@@ -14,29 +12,24 @@ class CategoryPost extends Component
     use WithPagination;
     public $category;
 
-
+    public $searchTerm = '';
     public function mount($slug)
     {
-        // $category = Category::where('slug', $slug)->first();
         $this->category = Category::where('slug', $slug)->firstOrFail();
-        // if ($category) {
-
-        //     $posts = $category->posts()->paginate(3);
-        //     dd($posts);
-        // }
 
     }
     public function render()
     {
 
-        $posts = $this->category->posts()->paginate(3);
+        $posts = $this->category->posts();
+        if ($this->searchTerm != '') {
+            $posts->orWhere("title", "like", "%" . $this->searchTerm . "%");
+        }
 
-        return view('livewire.category-post', ['posts' => $posts])
+        return view('livewire.category-post', ['posts' => $posts->paginate(10)])
             ->extends('layouts.app')
             ->section('content')
         ;
     }
-
-
 
 }

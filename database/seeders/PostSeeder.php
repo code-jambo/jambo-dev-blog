@@ -13,8 +13,6 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        Post::create([
-            'title' => "Axios turorial"
-        ]);
+        \App\Models\Post::factory(10000)->create();
     }
 }
