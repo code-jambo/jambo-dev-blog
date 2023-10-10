@@ -2,6 +2,7 @@
 
 use App\Livewire\Posts;
 use App\Livewire\Post;
+use App\Livewire\CategoryPost;
 use App\Livewire\Categories;
 
 use App\Livewire\About;
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/posts', Posts::class);
 Route::get('/categories', Categories::class);
+Route::get('/category/{slug}', CategoryPost::class);
 Route::get('/', Posts::class)->name('home');
 Route::get('/posts/{slug}', Post::class);
 // Route::get('/post', Post::class);

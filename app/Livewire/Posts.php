@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Category;
 use Livewire\Component;
 
 use App\Models\Post as PostsModel;
@@ -14,7 +15,6 @@ class Posts extends Component
 
 
     use WithPagination;
-
 
 
     public function render()

@@ -6,7 +6,11 @@
         <div class="col">
             <h3 class="title mb-1"><a wire:navigate class="text-link" href="{{ $plink }}">{{ $ptitle }}</a>
             </h3>
-            <div class="meta mb-1"><span class="date">Published {{ $pdate }}</span>
+            <div class="text-sm mb-1"><small class="date bg-secondary text-white"
+                    style="border-radius: 6px; padding: 3px;">{{ $pdate }}</small>
+
+                <small class="date bg-secondary text-white"
+                    style="border-radius: 6px; padding: 3px;">{{ $category ?? '' }}</small>
 
             </div>
             <div class="intro">{{ $pcontent }}</div>
