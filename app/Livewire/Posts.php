@@ -25,7 +25,6 @@ class Posts extends Component
     public function render()
     {
 
-        sleep(3);
         $posts = PostsModel::select('*');
         if ($this->searchTerm != '') {
             $posts->orWhere('title', 'like', "%" . $this->searchTerm . "%");
