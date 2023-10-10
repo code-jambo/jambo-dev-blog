@@ -6,7 +6,7 @@
         <h3 class="text-center pt-4 pb-0 text-primary "><u>Posts Categories</u></h3>
         <div class="row pt-0 p-2 m-5">
             @foreach ([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 4] as $t)
-                <div class="col-sm-3 col-md-3 col-lg-3 mb-4">
+                <div class="col-sm-3 col-md-3 col-lg-3 mb-3">
                     <div class="card text-dark card-has-bg click-col"
                         style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
                         {{-- <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street"
@@ -31,6 +31,41 @@
 @endsection
 
 <style>
+    .card .card-footer {
+        background: none;
+        border-top: none;
+    }
+
+    .card .card-footer .media img {
+        border: solid 3px rgba(255, 255, 255, 0.3);
+    }
+
+    .card .card-title {
+        font-weight: 800;
+    }
+
+    .card .card-meta {
+        color: rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    .card .card-body {
+        transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card:hover {
+        cursor: pointer;
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card:hover .card-body {
+        margin-top: 30px;
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+
     .lead {
         color: #aaa;
     }
@@ -87,51 +122,5 @@
         box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
         background-size: 130%;
         transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .card.card-has-bg:hover .card-img-overlay {
-        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-        background: #3B7EEB;
-        background: linear-gradient(0deg, rgba(35, 87, 165, 0.5) 0%, #3B7EEB 100%);
-    }
-
-    .card .card-footer {
-        background: none;
-        border-top: none;
-    }
-
-    .card .card-footer .media img {
-        border: solid 3px rgba(255, 255, 255, 0.3);
-    }
-
-    .card .card-title {
-        font-weight: 800;
-    }
-
-    .card .card-meta {
-        color: rgba(0, 0, 0, 0.3);
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 2px;
-    }
-
-    .card .card-body {
-        transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .card:hover {
-        cursor: pointer;
-        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .card:hover .card-body {
-        margin-top: 30px;
-        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .card .card-img-overlay {
-        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-        background: #3B7EEB;
-        background: linear-gradient(0deg, rgba(255, 186, 33, 0.3785889356) 0%, #3B7EEB 100%);
     }
 </style>
