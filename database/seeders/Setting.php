@@ -12,11 +12,6 @@ class Setting extends Seeder
      * Run the database seeds.
      */
 
-
-    //  $table->string('theme_id');
-    // $table->string('name');
-    // $table->string('description');
-    // $table->longText('about');
     public function run(): void
     {
         SettingModel::create([

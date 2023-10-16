@@ -15,11 +15,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             Setting::class,
+            AdminSeeder::class,
         ]);
-        \App\Models\User::create([
-            'name' => 'Code Jambo',
-            'email' => 'jambo@gmail.com',
-            'password' => bcrypt('password')
-        ]);
+        // \App\Models\User::create([
+        //     'name' => 'Code Jambo',
+        //     'email' => 'jambo@gmail.com',
+        //     'password' => bcrypt('Password')
+        // ]);
     }
 }
