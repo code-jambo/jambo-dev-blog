@@ -3,7 +3,14 @@
         <div class="container single-col-max-width">
             <header class="blog-post-header">
                 <h2 class="title mb-2">{{ $post->title }}</h2>
-                <div class="meta mb-3"><span class="date">Published {{ $post->created_at->format('D M Y') }}</span>
+                <div class="meta mb-3">
+                    <span class="date">Published {{ $post->created_at->format('D M Y') }}</span>
+                    <a wire:navigate href="/category/{{ $post->category->slug }}">
+                        <span class="date bg-secondary text-white" style="border-radius: 6px; padding:4px;">
+
+                            {{ $post->category->title }}
+                        </span>
+                    </a>
                 </div>
             </header>
 

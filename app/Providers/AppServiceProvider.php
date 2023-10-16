@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 
 use Illuminate\Support\ServiceProvider;
@@ -24,11 +25,17 @@ class AppServiceProvider extends ServiceProvider
     {
 
         // Config
-        View::share('theme', $this->getTheme());
+        View::share('theme', ($this->getTheme() ?? 1));
     }
 
     public function getTheme()
     {
-        return Setting::find(1)->theme_id ?? 1;
+        if (DB::connection()->getTablePrefix('settings')) {
+            return optional(Setting::find(1)->theme_id ?? 1);
+        } else {
+            return 1;
+        }
+
+
     }
 }

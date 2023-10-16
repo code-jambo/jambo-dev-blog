@@ -81,7 +81,7 @@
 
         @media (max-width: 420px) {
             .card {
-                min-height: 100px;
+                min-height: 150px;
             }
         }
 
